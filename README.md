@@ -4,6 +4,15 @@ A FastAPI service that routes each query to a cheap or expensive Groq model
 based on complexity, then shows a live dashboard of what you actually spent
 vs what you'd have spent if every request went to the big model.
 
+## Live Demo
+
+![LLM Cost Router dashboard showing live savings](assets/demo.png)
+
+A simple query ("What is FastAPI?") routes to Llama 3.1 8B Instant and costs
+$0.000047. A complex query ("Compare LangGraph and CrewAI in depth...")
+correctly routes to Llama 3.3 70B Versatile instead — the router isn't just
+always picking the cheap model, it's making a real complexity-based call.
+
 ## Why this exists
 
 Most agent projects call one model for everything, regardless of whether the
@@ -72,7 +81,8 @@ llm-cost-router/
 ├── router_logic.py    complexity classifier + model selection
 ├── pricing.py          Groq pricing constants + cost math
 ├── storage.py           in-memory request log + stats aggregation
-└── static/index.html    live dashboard (vanilla JS, no build step)
+├── static/index.html    live dashboard (vanilla JS, no build step)
+└── assets/demo.png       screenshot used in this README
 ```
 
 Storage is in-memory (a Python list behind a lock) — good enough for a demo
