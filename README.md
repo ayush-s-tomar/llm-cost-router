@@ -1,4 +1,4 @@
-# ⚡ LLM Cost Router
+# âš¡ LLM Cost Router
 
 A Streamlit app that routes each query to a cheap or expensive Groq model based on complexity, then shows a live dashboard of what you actually spent vs. what you'd have spent if every request went to the big model.
 
@@ -13,17 +13,19 @@ A Streamlit app that routes each query to a cheap or expensive Groq model based 
   <a href="https://github.com/ayush-s-tomar/llm-cost-router/commits/main"><img src="https://img.shields.io/github/last-commit/ayush-s-tomar/llm-cost-router" alt="Last commit"></a>
 </p>
 
-**🔗 Live demo:** [llm-cost-router.streamlit.app](https://llm-cost-router.streamlit.app/)
+**ðŸ”— Live demo:** [llm-cost-router.streamlit.app](https://llm-cost-router.streamlit.app/)
 
 ---
 
 ## Live Demo
 
+https://github.com/user-attachments/assets/ed43ddfa-fc49-4b12-b89d-9452307dddb0
+
 ![LLM Cost Router demo](assets/demo.gif)
 
 ![LLM Cost Router dashboard showing live savings](assets/demo.png)
 
-A simple query (`"What is FastAPI?"`) routes to **Llama 3.1 8B Instant** and costs `$0.000047`. A complex query (`"Compare LangGraph and CrewAI in depth..."`) correctly routes to **Llama 3.3 70B Versatile** instead — the router isn't just always picking the cheap model, it's making a real complexity-based call.
+A simple query (`"What is FastAPI?"`) routes to **Llama 3.1 8B Instant** and costs `$0.000047`. A complex query (`"Compare LangGraph and CrewAI in depth..."`) correctly routes to **Llama 3.3 70B Versatile** instead â€” the router isn't just always picking the cheap model, it's making a real complexity-based call.
 
 ---
 
@@ -31,7 +33,7 @@ A simple query (`"What is FastAPI?"`) routes to **Llama 3.1 8B Instant** and cos
 
 Most agent projects call one model for everything, regardless of whether the query is "what is X" or "design a distributed system architecture." That's money left on the table.
 
-This router classifies each query with a near-free heuristic (no LLM call needed just to decide which LLM to call), sends simple queries to **Llama 3.1 8B Instant** (`$0.05` / `$0.08` per 1M input/output tokens) and complex ones to **Llama 3.3 70B Versatile** (`$0.59` / `$0.79` per 1M tokens) — an **~11x price gap** — and tracks the savings.
+This router classifies each query with a near-free heuristic (no LLM call needed just to decide which LLM to call), sends simple queries to **Llama 3.1 8B Instant** (`$0.05` / `$0.08` per 1M input/output tokens) and complex ones to **Llama 3.3 70B Versatile** (`$0.59` / `$0.79` per 1M tokens) â€” an **~11x price gap** â€” and tracks the savings.
 
 ## How routing works
 
@@ -41,7 +43,7 @@ The classifier in `app.py` checks for:
 - Complexity keywords (`"compare"`, `"analyze"`, `"design"`, `"trade-off"`, `"step by step"`, etc.)
 - Simple-query patterns (`"what is"`, `"who is"`, `"define"`, `"list"`)
 
-No ML model, no extra API call — routing decisions have to be free or they defeat the purpose.
+No ML model, no extra API call â€” routing decisions have to be free or they defeat the purpose.
 
 ---
 
@@ -72,10 +74,10 @@ New-Item -ItemType Directory -Force -Path .streamlit | Out-Null
 python -m streamlit run app.py
 ```
 
-Open **http://localhost:8501** — type a query in the box:
+Open **http://localhost:8501** â€” type a query in the box:
 
-- Try `What is FastAPI?` → routes to the cheap model
-- Try `Compare LangGraph and CrewAI in depth, covering architecture trade-offs` → routes to the expensive model
+- Try `What is FastAPI?` â†’ routes to the cheap model
+- Try `Compare LangGraph and CrewAI in depth, covering architecture trade-offs` â†’ routes to the expensive model
 
 Watch the **"Saved"** and **"% Saved"** numbers update as you send more queries.
 
@@ -83,22 +85,22 @@ Watch the **"Saved"** and **"% Saved"** numbers update as you send more queries.
 
 ## Deploying to Streamlit Community Cloud
 
-Push to GitHub, connect the repo at [share.streamlit.io](https://share.streamlit.io), and add `GROQ_API_KEY` under **Settings → Secrets** in the same TOML format as `.streamlit/secrets.toml`. Never commit that file — it's already in `.gitignore`.
+Push to GitHub, connect the repo at [share.streamlit.io](https://share.streamlit.io), and add `GROQ_API_KEY` under **Settings â†’ Secrets** in the same TOML format as `.streamlit/secrets.toml`. Never commit that file â€” it's already in `.gitignore`.
 
 ---
 
 ## Architecture
 llm-cost-router/
-├── app.py Streamlit app: UI, routing logic, Groq calls, live dashboard
-├── requirements.txt dependencies
-├── .streamlit/secrets.toml local-only Groq key (gitignored)
-└── assets/demo.png screenshot used in this README
+â”œâ”€â”€ app.py Streamlit app: UI, routing logic, Groq calls, live dashboard
+â”œâ”€â”€ requirements.txt dependencies
+â”œâ”€â”€ .streamlit/secrets.toml local-only Groq key (gitignored)
+â””â”€â”€ assets/demo.png screenshot used in this README
 ---
 
 ## Notes
 
-- Pricing constants are from groq.com/pricing as of July 2026 — update them if Groq changes rates.
-- `httpx` is pinned below 0.28 — newer versions break the Groq SDK's client init (`unexpected keyword argument 'proxies'`).
+- Pricing constants are from groq.com/pricing as of July 2026 â€” update them if Groq changes rates.
+- `httpx` is pinned below 0.28 â€” newer versions break the Groq SDK's client init (`unexpected keyword argument 'proxies'`).
 - Token counts use the real `usage` field from Groq's API response when available, falling back to a rough character-count estimate.
 
 ---
@@ -112,7 +114,7 @@ pip install -r requirements.txt
 ruff check .
 ```
 
-CI runs the same checks automatically on every push and PR — see [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
+CI runs the same checks automatically on every push and PR â€” see [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
 
 ## License
 
@@ -120,4 +122,4 @@ Released under the [MIT License](LICENSE).
 
 ## Author
 
-**Ayush Singh Tomar** — [GitHub](https://github.com/ayush-s-tomar)
+**Ayush Singh Tomar** â€” [GitHub](https://github.com/ayush-s-tomar)
