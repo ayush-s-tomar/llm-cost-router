@@ -1,0 +1,75 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>LLM Cost Router demo card</title>
+<desc>Dashboard showing 33 percent cost savings from routing simple queries to a cheap model and complex queries to an expensive model</desc>
+
+<rect width="900" height="620" rx="16" fill="#0d0f14"/>
+
+<rect x="0" y="0" width="900" height="620" rx="16" fill="none" stroke="#23252c" stroke-width="1"/>
+
+<circle cx="60" cy="56" r="22" fill="#1a2f4a"/>
+<path d="M50 56 L58 50 L58 62 Z M62 50 L70 56 L62 62 Z" fill="#5b9bd5"/>
+
+<text x="96" y="52" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f4f4f2">LLM Cost Router</text>
+<text x="96" y="72" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#8a8a92">FASTAPI + GROQ &#183; COMPLEXITY-BASED ROUTING</text>
+
+<rect x="700" y="34" width="160" height="34" rx="17" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+<circle cx="720" cy="51" r="4" fill="#5DCAA5"/>
+<text x="734" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#5DCAA5">33% CHEAPER &#183; LIVE</text>
+
+<text x="450" y="150" font-family="Arial, sans-serif" font-size="64" font-weight="800" fill="#f0a868" text-anchor="middle">33% CHEAPER</text>
+<text x="450" y="176" font-family="Arial, sans-serif" font-size="13" letter-spacing="2" fill="#8a8a92" text-anchor="middle">SAME ANSWER &#183; SMARTER MODEL ROUTING</text>
+
+<rect x="60" y="210" width="780" height="120" rx="10" fill="#15171d" stroke="#23252c" stroke-width="1"/>
+<text x="84" y="238" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#8a8a92">LAST QUERY</text>
+<text x="84" y="264" font-family="Arial, sans-serif" font-size="15" fill="#e8e8ea">Compare LangGraph and CrewAI in depth, covering architecture trade-offs</text>
+<rect x="84" y="280" width="300" height="28" rx="14" fill="#3C3489"/>
+<text x="234" y="298" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#CECBF6" text-anchor="middle">Routed to llama-3.3-70b-versatile &#183; complex</text>
+
+<g>
+<rect x="60" y="350" width="240" height="88" rx="10" fill="#15171d"/>
+<text x="80" y="376" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#8a8a92">TOTAL REQUESTS</text>
+<text x="80" y="412" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#f4f4f2">3</text>
+</g>
+
+<g>
+<rect x="330" y="350" width="240" height="88" rx="10" fill="#15171d"/>
+<text x="350" y="376" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#8a8a92">SAVED</text>
+<text x="350" y="412" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#5DCAA5">$0.000360</text>
+</g>
+
+<g>
+<rect x="600" y="350" width="240" height="88" rx="10" fill="#15171d"/>
+<text x="620" y="376" font-family="Arial, sans-serif" font-size="11" letter-spacing="1" fill="#8a8a92">% SAVED</text>
+<text x="620" y="412" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#EF9F27">33.0%</text>
+</g>
+
+<text x="60" y="472" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#f4f4f2">Recent Requests</text>
+
+<rect x="60" y="486" width="780" height="30" fill="#0f1116"/>
+<text x="80" y="506" font-family="Arial, sans-serif" font-size="11" fill="#8a8a92">QUERY</text>
+<text x="470" y="506" font-family="Arial, sans-serif" font-size="11" fill="#8a8a92">ROUTED TO</text>
+<text x="640" y="506" font-family="Arial, sans-serif" font-size="11" fill="#8a8a92">COST</text>
+<text x="740" y="506" font-family="Arial, sans-serif" font-size="11" fill="#8a8a92">SAVED</text>
+
+<line x1="60" y1="516" x2="840" y2="516" stroke="#23252c" stroke-width="1"/>
+<text x="80" y="536" font-family="Arial, sans-serif" font-size="12" fill="#e8e8ea">Compare LangGraph and CrewAI in depth...</text>
+<rect x="470" y="522" width="150" height="22" rx="11" fill="#3C3489"/>
+<text x="545" y="537" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#CECBF6" text-anchor="middle">70b-versatile</text>
+<text x="640" y="536" font-family="Arial, sans-serif" font-size="12" fill="#e8e8ea">$0.000691</text>
+<text x="740" y="536" font-family="Arial, sans-serif" font-size="12" fill="#5DCAA5">$0.000000</text>
+
+<line x1="60" y1="548" x2="840" y2="548" stroke="#1a1c22" stroke-width="1"/>
+<text x="80" y="568" font-family="Arial, sans-serif" font-size="12" fill="#e8e8ea">List the top 3 vector databases for RAG</text>
+<rect x="470" y="554" width="130" height="22" rx="11" fill="#085041"/>
+<text x="535" y="569" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#9FE1CB" text-anchor="middle">8b-instant</text>
+<text x="640" y="568" font-family="Arial, sans-serif" font-size="12" fill="#e8e8ea">$0.000020</text>
+<text x="740" y="568" font-family="Arial, sans-serif" font-size="12" fill="#5DCAA5">$0.000180</text>
+
+<line x1="60" y1="580" x2="840" y2="580" stroke="#1a1c22" stroke-width="1"/>
+<text x="80" y="600" font-family="Arial, sans-serif" font-size="12" fill="#e8e8ea">What is FastAPI?</text>
+<rect x="470" y="586" width="130" height="22" rx="11" fill="#085041"/>
+<text x="535" y="601" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#9FE1CB" text-anchor="middle">8b-instant</text>
+<text x="640" y="600" font-family="Arial, sans-serif" font-size="12" fill="#e8e8ea">$0.000020</text>
+<text x="740" y="600" font-family="Arial, sans-serif" font-size="12" fill="#5DCAA5">$0.000180</text>
+
+</svg>
