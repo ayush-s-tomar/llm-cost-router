@@ -23,10 +23,7 @@ A Streamlit app that routes each query to a cheap or expensive Groq model based 
 
 ### Screenshots
 
-<p>
-  <img src="assets/demo.png" alt="LLM Cost Router dashboard showing live savings" width="49%">
-  <img src="assets/demo2.png" alt="LLM Cost Router simple vs complex routing" width="49%">
-</p>
+![LLM Cost Router dashboard showing live savings](assets/demo.png)
 
 ### Video Walkthrough
 
